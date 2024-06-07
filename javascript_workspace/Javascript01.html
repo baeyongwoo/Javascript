@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        // var a = 10;
+        // console.log(a);
+        // a += 10;
+        // console.log(typeof(a));
+        // a ='안녕하세요';
+        // console.log(typeof(a));
+        // a =true;
+        // console.log(typeof(a));
+        
+        // var b = true;
+        // console.log(b);
+
+        let fileName = 'sa.mp.le.js';
+
+        console.log(fileName.endsWith('js')); //이거의 반환값은 boolean이라 아래 코드 못 찾음ㅁ
+
+
+        //console.log(fileName.replace(fileName.endsWith('js'), "html"));
+        console.log(fileName.replace(fileName.substr(fileName.lastIndexOf('.')+1, fileName.length), "html"));
+
+
+        //확장자 구하기
+        console.log(fileName.substr(fileName.lastIndexOf('.')+1, fileName.length));
+        
+        console.log(typeof(String(3)));
+        
+
+
+        function plus(x) {
+            console.log(x+5);
+            
+            
+        }
+
+        plus(3);
+
+
+        //array
+        let a = [1,2,3,4,5];
+        console.log(a[1]);
+
+        
+
+        let lotto = [];
+
+        for(let i=0; i<7; i++){
+            [...new Set(lotto)]
+            lotto[i] = Math.floor(Math.random()*45+1);
+        }
+
+
+        
+        console.log((lotto.sort((a,b) => a-b)));
+
+        let id=[] //빈배열
+        let id2={} //빈 객체
+
+        let person={
+            name:"홍길동",
+            age:"28",
+            books:"자바스크립트",
+            job:"developer"
+        }
+
+
+        console.log(person.age);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
