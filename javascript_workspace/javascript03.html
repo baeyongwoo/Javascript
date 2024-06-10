@@ -5,10 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
     <script>
-        window.alert("Hi~~~");
+        // window.alert("Hi~~~");
+        
+        function check() {
+            let io = document.getElementById('io').value;
+            console.log(io);
+            for(let i =0; i< io; i++)
+            console.log(i);
+        }
+
+        function red() {
+            let button =document.querySelector('#btn3');
+            console.log('red 함수 왔니?', button);
+            button.style.backgroundColor='red';
+        }
+
+
+
     </script>
+     <script src="/js/javascript.js"></script>
 </head>
 <body>
-    <input type="butto" value="click" onclick="alert('안녕하세요')">
+    <div><input type="text"  id="io"></div>
+    <div><input type="button" value="0부터 입력한값까지"  onclick="check()"></div>
+
+    <!-- 인라인 이벤트 모델 -->
+    <div><input type="button" id="btn3" value="클릭"  onclick="red()"></div>
+    <div><input type="button" id="btn4" value="클릭"  ></div>
+    <script>
+        let button = document.querySelector("#btn4");
+        button.addEventListener("click", function (e) {
+           alert("click 함수 실행"); 
+        });
+    </script>
+
+    <!-- 표준 이벤트 모델 -->
+    <input id="input1">
+    <script>
+        let input = document.querySelector('#input1');
+
+        input.addEventListener('input', function (e) {
+            console.log('test : ' + e.target.value);
+
+            //이렇게 하면 keydown가 달리 처음 q만 인식함
+            if(e.target.value ==='q'){
+                alert('q가 감지되었습니다');
+            }
+        });    
+            
+    
+
+    </script>
+
+    <div><input type="button" id="btn5" value="test"></div>
+
+
+    <script>
+        let btn5 = document.querySelector('#btn5');
+        console.log('btn의 정보 : ' + btn5.value);  //value값이 온다
+        btn5.onclick=function () {
+            alert("btn5번 클릭");
+        }
+    </script>
+
+    <div><input type="button" id="btn6" value="click"></div>
+    <div><input type="button" id="btn7" value="click"></div>
+    <div><input type="input" id="btn8" value="click2"></div>
+    <div><input type="input" id="change" value="click3"></div>
+    
+    <!-- 객체를 event로 전달해야한다 -->
+    <button onmouseover="red1(event)" onmouseleave="blue(event)">HERE!</button>
+    
+    <input type="btn10" type="button" >
 </body>
 </html>

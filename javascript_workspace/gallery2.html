@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (e) {
+            //input 태그(버튼)을 찾는다.
+            let prevBtn = document.querySelector('#prev');
+            let nextBtn = document.querySelector('#next');
+
+            
+            console.log('prev log : ' + prev);
+            //img태그를 찾는다
+            let img = document.querySelector('img');
+            let img1 = "img/pic01.jpg";
+            let img2 = "img/pic02.jpg";
+            let img3 = "img/pic03.jpg";
+            let img4 = "img/pic04.jpg";
+
+
+
+            prevBtn.addEventListener("click", function(e){
+                //src 속성값을 찾는다
+                console.log('prev 눌렀을 때 함수');
+                let src = img.getAttribute("src");
+                console.log('현재 img src' , src);
+                if(src===img1){
+                    img.setAttribute('src',img4);
+                }else if(src === img2){
+                    img.setAttribute('src', img1);
+                }else if(src === img3){
+                    img.setAttribute('src', img2);
+                }else {
+                    img.setAttribute('src', img3);
+                }
+               
+            });
+
+
+
+
+
+            nextBtn.addEventListener("click", function(e){
+                console.log('next 눌렀을 때 함수');
+                //src 속성값을 찾는다
+                let src = img.getAttribute("src");
+                if(src===img1){
+                    img.setAttribute('src',img2);
+                }else if(src === img2){
+                    img.setAttribute('src', img3);
+                }else if(src === img3){
+                    img.setAttribute('src', img4);
+                }else {
+                    img.setAttribute('src', img1);
+                }
+               
+            });
+
+          
+
+
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="prev" id="prev">
+    <img src="./img/pic01.jpg" alt="갤럭시1" width="500px" height="500px">
+    <input type="button" value="next" id="next">
+</body>
+</html>

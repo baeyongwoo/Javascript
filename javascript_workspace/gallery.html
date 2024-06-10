@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (e) {
+            //input 태그(버튼)을 찾는다.
+            let prevBtn = document.querySelector('#prev');
+            let nextBtn = document.querySelector('#next');
+
+            
+            //img태그를 찾는다
+            let img = document.querySelector('img');
+            let img1 = "img/pic01.jpg";
+            let img2 = "img/pic02.jpg";
+            let img3 = "img/pic03.jpg";
+            let img4 = "img/pic04.jpg";
+
+
+            let arr = ["img/pic01.jpg", "img/pic02.jpg", "img/pic03.jpg", "img/pic04.jpg"];
+
+            let position=0;
+
+            prevBtn.addEventListener("click", function(e){
+
+                if(position===0){
+                    alert('처음사진입니다. 마지막으로 돌아갑니다.');
+                    position = arr.length-1;
+                    img.setAttribute('src', arr[position]);
+                    
+                }else{
+                    position--;
+                    img.setAttribute('src', arr[position]);
+                }
+           
+            });
+
+            nextBtn.addEventListener("click", function(e){
+                if(arr.length-1 > position){
+                console.log('check position value : ' + position);
+                position++;
+                
+                img.setAttribute("src", arr[position]);
+            }else {alert('마지막 사진입니다. 처음으로 돌아갑니다.');
+                position = 0;
+                img.setAttribute("src", arr[position]);
+            }
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="prev" id="prev">
+    <img src="./img/pic01.jpg" alt="갤럭시1" width="500px" height="500px">
+    <input type="button" value="next" id="next">
+</body>
+</html>
