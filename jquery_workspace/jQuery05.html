@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>before~apeend</title>
+    <script>
+        $(document).ready(function () {
+            $('#btn1').on('click', function () {
+                $('#span1').before('before');
+                $('#span1').after('after');
+                // prepend와 append는 태그 안에서 앞 뒤  css와 ::before :: after와 유사
+                $('#span1').prepend('pre');
+                $('#span1').append('append');
+
+            })
+
+            $('#btn2').on('click',function () {
+                    
+                    $('#span1').remove();
+                })
+                
+                $('#btn3').on('click',function () {
+                    $('#box1').empty();
+                })
+        })
+    </script>
+</head>
+<body>
+    <button id="btn1">click</button><br>
+    <span id="span1" style="background-color: red; width: 100%;">span1</span>
+    <div id="box1" style="background-color: blue; width: 300px; height: 300px; color: #fff;">
+        fdasflkjaklfjalkfjklasjfdlkasfjklasdf;da
+    </div>
+    <hr>
+    <button id="btn2">remove</button>
+    <button id="btn3">content clear</button>
+</body>
+</html>

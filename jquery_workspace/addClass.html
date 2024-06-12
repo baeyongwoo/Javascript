@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script>
+        $('document').ready(function () {
+            $('#btn1').on('click', function () {
+                $('#box1').addClass('right');
+                // $('#box1').css('left','200px');
+            })
+
+            $('#btn2').on('click',function () {
+                $("#box1").removeClass('right');
+            })
+
+            $('#btn3').on('click',function () {
+                $("#box1").toggleClass('right');
+            })
+
+            $('#btn4').on('click', function () {
+                $('#box1').css({
+                    "left" : "200px",
+                    "font-size" : "200%",
+                    "background" : "#0000ff",
+                    "padding-top": "30px", 
+                    "text-align" : "center"
+                })
+                
+            })
+
+            $('#btn5').on('click',function () {
+                $('#box1').addClass('animate__backInDown').addClass('right');
+                
+                
+            })
+
+
+            
+        })
+    </script>
+    <style>
+        .right{
+            left: 200px !important;
+            font-size: 50px !important;
+            background-color: aqua !important;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">move</button>
+    <button id="btn2">rollback</button>
+    <button id="btn3">toggle</button>
+    <button id="btn4">changeMode</button>
+    <div id="box1" class="animate__animated" style="background-color: green; width: 100px; height: 100px; position: absolute; left: 10px; top: 50px; transition: 0.5s;">box1</div>
+    <button id="btn5">effect</button>
+</body>
+</html>

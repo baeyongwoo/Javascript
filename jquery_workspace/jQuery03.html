@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(function (){
+        $('button').click(function () {
+            //chaining. 함수를 연속적으로 호출 . 함수의 리턴값이 reference이기 때문에 가능
+            // console.log('현재 p 태그 정보 : ', $('p').css.toString);
+            // $('p').css('color', 'red').slideUp().slideDown();
+            $('p').animate({left:"50px"}).animate({})
+            
+        })
+      })
+    </script>
+</head>
+
+<body>
+    <button>click</button>
+    <p>jQuery</p>
+</body>
+
+</html> 

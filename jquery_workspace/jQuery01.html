@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("p").show();
+            });
+            $("#btn2").click(function () {
+                $("p").hide();
+            });
+            $("#btn3").click(function () {
+                $("p").toggle();
+            })
+            $("#btn4").click(function () {
+                $("p").fadeIn();
+            })
+            $("#btn5").click(function () {
+                $("p").fadeOut();
+            })            
+            $("#btn6").click(function () {
+                $("p").fadeToggle();
+            })
+            $("#btn7").click(function () {
+                $("p").fadeTo('slow',0.2);
+            })
+            $("#btn8").click(function () {
+                $("p").slideDown();
+            })
+            $("#btn9").click(function () {
+                $("p").slideUp();
+            })
+            $("#btn10").click(function () {
+                $("p").slideToggle();
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <button id="btn1">show</button>
+    <button id="btn2">hide</button>
+    <button id="btn3">toggle</button>
+    <button id="btn4">fadeIn</button>
+    <button id="btn5">fadeout</button>
+    <button id="btn6">fadeToggle</button>
+    <button id="btn7">fadeTo</button>
+    <button id="btn8">slidedown</button>
+    <button id="btn9">slideup</button>
+    <button id="btn10">slideToggle</button>
+    
+    <p style="background-color: red;">jQuery</p>
+</body>
+</html>

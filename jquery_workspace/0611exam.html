@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>0611Example</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#change_background").click(function () {
+                console.log('click 신호');
+                $('body').css("background-color"," green");
+            })
+
+            $("#movepic button").click(function () {
+                console.log('이동시키기 신호');
+                $("div img").animate({ left: "+=50px" });
+                
+            })
+
+
+            $('.section1').click(function () {
+                console.log('슬라이스 요청');
+                
+                $('.section1+.panel').slideToggle();
+
+            })
+            
+            $('.section2').click(function () {
+                console.log('슬라이스 요청');
+                
+                $('.section2+.panel').slideToggle();
+
+            })
+
+            
+            $('.section3').click(function () {
+                console.log('슬라이스 요청');
+                
+                $('.section3+.panel').slideToggle();
+
+            })
+
+
+
+            
+
+        })
+    </script>
+
+    <style>
+        div{
+            display: inline-block;
+        }
+        .container{
+            display: flex;
+        }
+    </style>
+
+</head>
+<body>
+   
+    <button id="change_background">초록 배경으로 바꾸기</button>
+
+    <div id="movepic" >
+        <div>
+            <img src="./img/pic01.jpg" alt="갤럭시1" width="100px" height="100px" style="position: absolute;
+            left: -10px; top: 50px;">
+        </div>
+        <div>
+        <button>이동시키기</button>
+    </div>
+    </div>
+
+
+    <!-- 문제3번 ------------------------------------------------>
+    <style>
+    .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+      
+      /* .active, .accordion:hover {
+        background-color: #ccc; 
+      }
+      */
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+      } 
+
+      .question3{
+            display: inline-block;
+            width: 100%;
+            position: relative;
+            top: 500px;
+            
+      }
+
+      </style>
+
+      <style>
+        img{
+            width: 252px;
+            height: 240px;
+        }
+        .hottopic{
+            background-color: red;
+            display: flex;
+            width: auto;
+             height: 305px;
+            top: 139px;
+            position: relative;
+            flex-direction: column;
+            
+        }
+        .heading{
+            display: flex;
+            
+        }
+        .list_hottopic{
+
+        }
+        .list_group{
+            text-align: center;
+        }
+        .summary{
+            width: 252px;
+            height: 78px;
+            background-color: gray;
+            position: absolute;
+             top: 187px;
+             left: 106px;
+        }
+      </style>
+
+      <div class="hottopic">
+            <div class="heading">
+                <h3 class="title">
+                    <a href="#">핫토픽</a>
+                </h3>
+                >
+                <a href="#">여름 필수템</a>
+            </div>
+            <div class="list_group">
+                <div class="list_hottopic">
+                    <div class="list01">
+                        <img src="/img/list_pic01.jpg" alt="list01">
+                        <div class="summary">여름에 꼭 챙기세요!</div>
+                    </div>
+                    <div class="list02">
+                        <img src="/img/list_pic02.jpg" alt="list02">
+                        <div class="summary">뜨거운 여름 필수템 모음.zip</div>
+                    </div>
+                    <div class="list03">
+                        <img src="/img/list_pic03.jpg" alt="list03">
+                        <div class="summary">자외선 차단제, 모자는 필수!</div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="question3">
+          <h2>Accordion</h2>
+          
+          <button class="accordion section1">Section 1</button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          
+          <button class="accordion section2">Section 2</button>
+          <div class="panel ">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          
+          <button class="accordion section3">Section 3</button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+
+
+      </div>    
+      
+
+
+      <!-- 문제 4번------------------------------------------------ -->
+      
+
+    
+</body>
+</html>

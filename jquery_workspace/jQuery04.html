@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>.html~.val</title>
+    <script>
+        $(document).ready(function () {
+            $('#btn1').click(function () {
+                
+
+
+                $('#div1').html($('#p1').html());
+                $('#div2').html($('#p1').text());
+                $('#div1').text($('#p1').text()); //setter parameter가 있을 때
+                 $('#div1').text($('#p1').html()); //setter parameter값이 있을 때
+                 
+                 $('#div4').val($('#p1').text()); //setter parameter값이 있을 때
+
+             })
+        })
+    </script>
+</head>
+<body>
+    <!-- title은 이 페이지 다 쓰고 요약을 적자 -->
+    <button id="btn1">click</button>
+    <p id="p1">jQuery is a <b>javascript</b> library</p>
+    <div id = 'div1'></div>
+    <div id = 'div2'></div>
+    <hr>
+    <div id = 'div4' ></div>
+
+    <div id="div3">
+        &lt;script&gt;&lt;/script&gt;태그는 javascript를 작성하는 영역입니다.
+    </div>
+</body>
+</html>

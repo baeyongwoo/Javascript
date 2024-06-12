@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // 문서가 준비가 되면 익명함수가 호출됨 . ready는 이벤트 명. ready()는 ready이벤트를 처리하는 함수
+        $(document).ready(function(){
+            //#btn1을 찾아서 click이벤트 처리.
+            // document.querySelector("#btn1").addEventListener("click", function(){})
+            $("#btn1").click(function () {
+                alert("jquery");              
+            });
+
+            // console.log($("button"));
+            $(".btn2").click(function () {
+                console.log($(this)); // event발생시 this는 event가 발생한 녀석(자기자신)을 가리킴
+                $("p").hide();
+            })
+
+            $("p").mouseenter(function () {
+                alert('JQuery');
+            })
+        });
+    </script>
+</head>
+<body>
+    <p>jquery</p>
+    <button id="btn1">click</button>
+    <button class="btn2">click</button>
+    
+</body>
+</html>
