@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            border-collapse: collapse;
+        }
+
+    </style>
+    <script>
+        $(function () {
+            // $("#box4").parent().css({"border" :  "red 5px solid"});
+            // $("#box4").parents().css({"border" :  "red 1px solid"});
+            //$('#box4').next().css({"border" :  "red 1px solid"});
+            //$('#box4').nextAll().css({"border" :  "red 1px solid"});
+            // $('#box4').prev().css({"border" :  "red 1px solid"});
+            // $('#box4').prevAll().css({"border" :  "red 1px solid"});
+            // $('div>div>div').eq(0).css({"border" :  "red 1px solid"});
+            // $('div>div>div').not('#box4').css({"border" :  "red 1px solid"});
+            $('div').find("span").css({"border" :  "red 1px solid"});
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        grand parent
+        <div>
+            parent
+            <div id="box1">box1</div>
+            <div id="box2">box2</div>
+            <div id="box3">box3</div>
+            <div id="box4">box4</div>
+            <div id="box5">box5</div>
+            <div id="box6">box6</div>
+            <div id="box7">box7</div>
+            <span>span</span>
+        </div>
+    </div>
+</body>
+
+</html>

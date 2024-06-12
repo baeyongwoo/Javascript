@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>ajax</title>
+    <script>
+        $(document).ready(function () {
+            $('#btn1').click(function () {
+                $.ajax({
+                    url: "./data.txt",
+                    success:function(data){
+                        let arr = data.split(",");
+                        let str = "이름 : " + arr[0] + 
+                        ", 주소 : " + arr[1] + 
+                        ", 학과 : " + arr[2]
+                        
+                        $("#box").text(str);
+                    }
+
+                });
+            })
+
+            $('#btn2').click(function () {
+                $.ajax({
+                    url: "./data.xml",
+                    success:function(data){
+                        $("#box2").text(data);
+                    }
+                    
+                });
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <button id="btn1">CSV</button>
+    <div id="box"></div>
+    <button id="btn2">XML</button>
+    <div id="box2"></div>
+</body>
+</html>
